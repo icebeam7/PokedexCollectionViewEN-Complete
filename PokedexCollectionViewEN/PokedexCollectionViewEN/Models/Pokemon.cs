@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using PokedexCollectionViewEN.Class;
 
 namespace PokedexCollectionViewEN.Models
 {
@@ -21,7 +22,14 @@ namespace PokedexCollectionViewEN.Models
             }
         }
 
-        public string Types => string.Join(",", type);
+        public string Types => string.Join(", ", type);
+
+        public double HP => _base.HP * Constants.factor;
+        public double Attack => _base.Attack * Constants.factor;
+        public double Defense => _base.Defense * Constants.factor;
+        public double SpAttack => _base.SpAttack * Constants.factor;
+        public double SpDefense => _base.SpDefense * Constants.factor;
+        public double Speed => _base.Speed * Constants.factor;
     }
 
     public class Name

@@ -10,7 +10,7 @@ namespace PokedexCollectionViewEN
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.PokemonSearchScroll());
+            MainPage = new NavigationPage(new Views.Pokemon2CollectionViews());
         }
 
         protected override void OnStart()
